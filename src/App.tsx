@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Check, ChevronLeft, ChevronRight } from 'lucide-react';
 
-/* ============ schedule data ============ */
+
 
 const weekdayA = [
   { id: 'wd1',  start: '08:00', end: '08:15', label: 'Wake up & freshen up',       type: 'routine' },
@@ -86,7 +86,6 @@ const LEGEND = [
   { label: 'STUDIES',  hue: CATS.studies.hue, text: 'Semester subjects and exam prep — weekend blocks only.' },
 ];
 
-/* ============ helpers ============ */
 
 function fmtDate(d) {
   const y = d.getFullYear(), m = String(d.getMonth() + 1).padStart(2, '0'), day = String(d.getDate()).padStart(2, '0');
@@ -136,7 +135,7 @@ function hexToRgba(hex, a) {
   return `rgba(${r},${g},${b},${a})`;
 }
 
-/* ============ component ============ */
+
 
 export default function WeeklyPipeline() {
   const [selectedDate, setSelectedDate] = useState(() => { const d = new Date(); d.setHours(0, 0, 0, 0); return d; });
@@ -291,7 +290,7 @@ export default function WeeklyPipeline() {
           ))}
         </div>
 
-        {/* today run */}
+        {/* today run .*/}
         <div style={{ background: '#131926', border: '1px solid #212938', borderRadius: 10, padding: 14, marginTop: 18 }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
             <span className="pt-mono" style={{ fontSize: 11, color: '#7C8797', letterSpacing: '.04em' }}>TODAY'S RUN</span>
