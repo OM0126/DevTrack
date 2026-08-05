@@ -1,0 +1,772 @@
+.pageSection {
+  display: grid;
+  gap: 24px;
+}
+
+.gridRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.metricCard {
+  border-radius: 24px;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.metricLabel {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.metricValue {
+  margin: 0;
+  font-size: 32px;
+}
+
+.metricDetail {
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.welcomeCard,
+.planCard,
+.goalEditor,
+.settingsPanel {
+  border-radius: 24px;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.statusBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+  border-radius: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.statusLabel {
+  margin: 0;
+  text-transform: uppercase;
+  color: var(--muted);
+  letter-spacing: 0.16em;
+  font-size: 12px;
+}
+
+.statusTitle {
+  margin: 8px 0 0;
+  font-size: 28px;
+}
+
+.statusSummary {
+  color: var(--muted);
+}
+
+.taskList {
+  display: grid;
+  gap: 12px;
+}
+
+.taskRow {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  align-items: center;
+  border-radius: 18px;
+  padding: 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+
+.taskRow input {
+  width: 18px;
+  height: 18px;
+}
+
+.taskRow:hover {
+  background: var(--surface-hover);
+}
+
+.taskDone {
+  opacity: 0.74;
+}
+
+.taskTitle {
+  margin: 0;
+  font-size: 16px;
+}
+
+.taskMeta {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.goalList {
+  display: grid;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.goalItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: 18px;
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+}
+
+.roadmapCard {
+  border-radius: 24px;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.roadmapCard:hover {
+  transform: translateY(-2px);
+}
+
+.roadmapActive {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  margin-top: 16px;
+  border-radius: 999px;
+  background: rgba(100, 116, 139, 0.15);
+  overflow: hidden;
+}
+
+.progressBar > div {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 999px;
+}
+
+.projectHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 24px;
+  border-radius: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.projectGrid {
+  display: grid;
+  gap: 18px;
+}
+
+.projectCard {
+  border-radius: 24px;
+  padding: 22px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.resourcesList {
+  display: grid;
+  gap: 14px;
+}
+
+.resourceCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 18px;
+  background: var(--surface-strong);
+  border-radius: 18px;
+  border: 1px solid var(--border);
+}
+
+.resourceTitle {
+  font-size: 16px;
+  margin: 0 0 6px;
+}
+
+.resourceActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.resourceActions a,
+.resourceActions button {
+  border: none;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.resourceActions a {
+  background: var(--surface);
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.resourceActions button {
+  background: var(--surface-strong);
+  color: var(--text);
+}
+
+.notesHeader,
+.settingsActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.searchInput,
+.settingsTextarea {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: var(--surface-strong);
+  color: var(--text);
+  padding: 14px 16px;
+  font: inherit;
+}
+
+.notesGrid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+}
+
+.noteListItem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: var(--surface-strong);
+  text-align: left;
+  cursor: pointer;
+}
+
+.noteActive {
+  background: var(--accent-bg);
+  border-color: var(--accent);
+}
+
+.noteEditor {
+  border-radius: 24px;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  display: grid;
+  gap: 16px;
+}
+
+.noteMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.noteTextarea {
+  width: 100%;
+  min-height: 320px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: var(--surface-strong);
+  padding: 16px;
+  resize: vertical;
+  font: inherit;
+}
+
+.deleteButton,
+.primaryButton,
+.secondaryButton,
+.dangerButton {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 18px;
+  cursor: pointer;
+}
+
+.deleteButton,
+.secondaryButton {
+  background: var(--surface-strong);
+  color: var(--text);
+}
+
+.primaryButton {
+  background: var(--accent);
+  color: #fff;
+}
+
+.dangerButton {
+  background: #ec4899;
+  color: #fff;
+}
+
+.emptyState {
+  padding: 40px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.settingsPanel {
+  display: grid;
+  gap: 16px;
+}
+
+.settingsActions {
+  justify-content: flex-start;
+}
+
+.todaySection {
+  display: grid;
+  gap: 24px;
+}
+
+.todayHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.todayLabel {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+}
+
+.todayTitle {
+  margin: 0;
+  font-size: 34px;
+}
+
+.todaySubtitle {
+  margin: 10px 0 0;
+  color: var(--muted);
+}
+
+.viewControls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.primaryChip,
+.secondaryChip {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.primaryChip {
+  background: #4338ca;
+  color: #fff;
+}
+
+.secondaryChip {
+  background: var(--surface-strong);
+  color: var(--text);
+}
+
+.todayGrid {
+  display: grid;
+  grid-template-columns: 1.9fr 1fr;
+  gap: 24px;
+}
+
+.timelineCard,
+.panelCard {
+  border-radius: 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 24px;
+}
+
+.timelineHeader,
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.timelineSummary {
+  display: grid;
+  gap: 8px;
+  text-align: right;
+  color: var(--muted);
+}
+
+.timelineList {
+  display: grid;
+  gap: 16px;
+}
+
+.timelineItem {
+  display: grid;
+  grid-template-columns: 100px auto;
+  gap: 18px;
+  padding: 18px;
+  border-radius: 20px;
+  background: var(--surface-strong);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.timelineItem:hover {
+  transform: translateY(-2px);
+}
+
+.doneItem {
+  opacity: 0.78;
+}
+
+.timelineTime {
+  font-size: 13px;
+  color: var(--muted);
+  align-self: flex-start;
+}
+
+.timelineMark {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timelineMark span {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.timelineLine {
+  position: absolute;
+  left: 50%;
+  top: 16px;
+  width: 2px;
+  height: calc(100% - 20px);
+  background: rgba(148, 163, 184, 0.35);
+}
+
+.timelineContent {
+  display: grid;
+  gap: 10px;
+}
+
+.timelineTitleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+
+.timelineTitleRow p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.taskDuration {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.timelineMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.taskCategory {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.taskCheckbox {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.taskCheckbox input {
+  width: 18px;
+  height: 18px;
+}
+
+.taskChecked input {
+  accent-color: #22c55e;
+}
+
+.rightPanel {
+  display: grid;
+  gap: 20px;
+}
+
+.panelLabel {
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.progressRing {
+  width: 80px;
+  height: 80px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 40% 40%, rgba(96, 165, 250, 0.18), transparent 45%),
+    rgba(255, 255, 255, 0.04);
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-weight: 700;
+}
+
+.progressStats {
+  display: grid;
+  gap: 12px;
+}
+
+.progressStats div {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+}
+
+.progressStats strong {
+  color: #fff;
+}
+
+.weeklyOverview {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 16px 0 10px;
+}
+
+.dayDot {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.dayDotActive {
+  background: #4338ca;
+  border-color: #4338ca;
+  color: #fff;
+}
+
+.smallNote {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.hoursRow {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.hoursRow span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.hoursRow strong {
+  color: #fff;
+}
+
+.hoursRow:last-child {
+  margin-bottom: 0;
+}
+
+.hoursRow .progressBar {
+  height: 8px;
+  width: 100%;
+  border-radius: 999px;
+  background: rgba(100, 116, 139, 0.15);
+  overflow: hidden;
+}
+
+.hoursRow .progressBar > div {
+  height: 100%;
+  border-radius: 999px;
+}
+
+.goalMini {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 18px;
+  background: var(--surface-strong);
+  margin-top: 12px;
+}
+
+@media (max-width: 1100px) {
+  .todayGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .todayHeader,
+  .timelineHeader,
+  .panelHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timelineItem {
+    grid-template-columns: 1fr;
+  }
+
+  .timelineMark {
+    order: -1;
+    margin-bottom: 10px;
+  }
+}
+
+.notesGrid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+}
+
+.notesList {
+  display: grid;
+  gap: 12px;
+}
+
+.noteListItem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: var(--surface-strong);
+  text-align: left;
+  cursor: pointer;
+}
+
+.noteActive {
+  background: var(--accent-bg);
+  border-color: var(--accent);
+}
+
+.noteEditor {
+  border-radius: 24px;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  display: grid;
+  gap: 16px;
+}
+
+.noteMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.noteTextarea {
+  width: 100%;
+  min-height: 320px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: var(--surface-strong);
+  padding: 16px;
+  resize: vertical;
+  font: inherit;
+}
+
+.deleteButton,
+.primaryButton,
+.secondaryButton,
+.dangerButton {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 18px;
+  cursor: pointer;
+}
+
+.deleteButton,
+.secondaryButton {
+  background: var(--surface-strong);
+  color: var(--text);
+}
+
+.primaryButton {
+  background: var(--accent);
+  color: #fff;
+}
+
+.dangerButton {
+  background: #ec4899;
+  color: #fff;
+}
+
+.emptyState {
+  padding: 40px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.settingsPanel {
+  display: grid;
+  gap: 16px;
+}
+
+.settingsActions {
+  justify-content: flex-start;
+}
+
+@media (max-width: 960px) {
+  .gridRow,
+  .notesGrid {
+    grid-template-columns: 1fr;
+  }
+}
